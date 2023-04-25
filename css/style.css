@@ -43,3 +43,93 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: #0069d9;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+
+
+/* Estilos para el formulario */
+form {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f8f8f8;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #ccc;
+  }
+  
+  form label {
+	display: block;
+	margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	font-size: 16px;
+  }
+  
+  form input[type="submit"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-top: 20px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  /* Estilos para los mensajes de error */
+  .error {
+	color: red;
+	font-size: 14px;
+	margin-bottom: 10px;
+  }
+  
