@@ -1,13 +1,18 @@
 /* VALIDACIONES MUAJAJJA */
 function validarFormulario() {
+  console.log("validando formulario");
   // Validar que los campos obligatorios estén completos
   const nombre = document.getElementById("nombre").value.trim();
   const email = document.getElementById("email").value.trim();
   const telefono = document.getElementById("phone").value.trim();
+  
   if (nombre === "" || email === "" || telefono === "") {
     alert("Por favor, complete todos los campos obligatorios.");
     return false;
   }
+
+
+
 
   // Validar el formato del correo electrónico
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,7 +41,7 @@ function validarEmail(email) {
 	return re.test(email);
 }
 
-function validarFormulario() {
+function validarlogin() {
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("password").value;
 
