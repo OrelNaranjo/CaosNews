@@ -31,17 +31,44 @@
           <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#login">Inicio de sesión</a>
         </div>
         <!-- ========== Modal Login ========== -->
-        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel">
-          <div class="modal-dialog">
+        <div class="modal fade" id="login" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="loginLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header">
-                <p>TEXTO LOGIN</p>
+              <div class="modal-header pb-0 pt-3">
+                <h5>Iniciar Sesión</h5>
+                <button type="button" class="btn-close mb-1" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>Aca formulario</p>
+                <div class="px-4">
+                  <form onsubmit="return validarlogin()" method="post">
+                    <div class="row py-1">
+                      <label for="email" class="ps-0">Correo Electrónico:</label>
+                    </div>
+                    <div class="row">
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="row py-1">
+                      <label for="password" class="ps-0">Contraseña:</label>
+                    </div>
+                    <div class="row">
+                      <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="row w-50">
+                      <input type="submit" class="btn btn-primary ms-auto mt-2" value="Iniciar Sesión">
+                    </div>
+                  </form>
+                </div>
+                
               </div>
               <div class="modal-footer">
-                <p>FOOTER</p>
+                <div class="row text-end">
+                    <h6>No te acuerdas de tu contraseña?</h6>
+                    <a href="registro.html" class="link-two" onclick="restablecerContrasena()">Restablecer Contraseña</a>
+                </div>
+                <div class="row text-end">
+                    <h6>No tienes una cuenta?</h6>
+                    <a href="registro.html" class="link-two">Registrarse</a>
+                </div>
               </div>
             </div>
           </div>

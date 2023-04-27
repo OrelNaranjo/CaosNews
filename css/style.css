@@ -36,7 +36,11 @@ body {
     text-decoration: none;
     color: white;
 }
+.link-two {
+    text-decoration: none;
+    color: #1b1b1b;
+}
 
-.link:hover {
+.link:hover, .link-two:hover {
     color: #c500cc;
 }
