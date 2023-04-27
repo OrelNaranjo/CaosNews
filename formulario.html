@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Formulario de contacto</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/custom.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ========== Favicon ========== -->
+		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
+		<!-- ========== CSS FontAwesome ========== -->
+		<link rel="stylesheet" href="css/fontawesome.min.css" />
+		<link rel="stylesheet" href="css/solid.min.css" />
+		<link rel="stylesheet" href="css/brands.min.css" />
+		<!-- ========== CSS Bootstrap ========== -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- ========== CSS Personalizado ========== -->
+		<link rel="stylesheet" href="css/style.css">
+		<title>Caos News - La voz de todos</title>
+	  </head>
 <body>
 	<h1>Formulario de contacto</h1>
 	<form action="" name="frmcontacto" id="frmcontacto">
 		<label for="nombre">Nombre:</label>
-		<input type="text" id="nombre" name="nombre" autocomplete="off" >
+		<input type="text" id="nombre" name="nombre" autocomplete="off">
 	
 		<label for="email">Correo electrónico:</label>
 		<input type="email" id="email" name="email" autocomplete="off" required>
@@ -86,7 +95,15 @@
 		<label for="mensaje">Mensaje:</label>
 		<textarea id="mensaje" name="mensaje" autocomplete="off" required></textarea>
 
-		<input type="submit" onclick="return validarFormulario()" value="Enviar">
+		<input type="submit" onclic
+		k="return validarFormulario()" value="Enviar">
 	</form>
+    <!-- ========== Librerias JS Bootstrap ========== -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- ========== Librerias JS jQuery ========== -->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <!-- ========== Librerias JS Personalizada ========== -->
+    <script src="js/custom.js"></script>
 </body>
 </html>
