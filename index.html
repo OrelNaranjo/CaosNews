@@ -22,6 +22,32 @@
   <div class="container">
     <!-- ========== Encabezado ========== -->
     <header>
+      <div class="row mx-0 py-1 bg-dark">
+        <div class="col"></div>
+        <div class="col-auto text-end">
+          <div class="text-end"><p class="text-light">18 de abril de 2023</p></div>
+        </div>
+        <div class="col-auto text-end">
+          <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#login">Inicio de sesión</a>
+        </div>
+        <!-- ========== Modal Login ========== -->
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p>TEXTO LOGIN</p>
+              </div>
+              <div class="modal-body">
+                <p>Aca formulario</p>
+              </div>
+              <div class="modal-footer">
+                <p>FOOTER</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="row p-md-4">
         <!-- ========== Logotipo ========== -->
         <div class="col">
@@ -32,8 +58,7 @@
           </div>
         </div>
         <!-- ========== Buscador ========== -->
-        <div class="col-3">
-          <div class="text-end"><p>18 de abril de 2023</p></div>
+        <div class="col-4">
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Buscar aqui..." aria-label="Search">
             <button class="btn btn-primary" type="submit">Buscar</button>

@@ -31,3 +31,12 @@ body {
     max-height: 400px;
     object-fit: fill;
 }
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: #c500cc;
+}
