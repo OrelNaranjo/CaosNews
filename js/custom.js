@@ -1,3 +1,18 @@
+/* ********* Obtener fecha actual ********* */
+function getFecha(){
+  const Month = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+    "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+  ];
+  const Day = [
+    "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado",
+  ];
+  const date = new Date();
+
+  document.getElementById("current_date").innerHTML = Day[date.getDay()] + " " + date.getDate() + " de " + Month[date.getMonth()] + " de " + date.getFullYear();
+}
+
+
 /* VALIDACIONES MUAJAJJA */
 function validarFormulario() {
   console.log("validando formulario");

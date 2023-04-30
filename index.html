@@ -18,14 +18,14 @@
   <title>Caos News - La voz de todos</title>
 </head>
 
-<body>
+<body onload="getFecha()">
   <div class="container">
     <!-- ========== Encabezado ========== -->
     <header>
       <div class="row mx-0 py-1 bg-dark">
         <div class="col"></div>
         <div class="col-auto text-end">
-          <div class="text-end"><p class="text-light">18 de abril de 2023</p></div>
+          <div class="text-end"><p class="text-light" id="current_date"></p></div>
         </div>
         <div class="col-auto text-end">
           <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#login">Inicio de sesión</a>
