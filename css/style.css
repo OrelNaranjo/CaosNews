@@ -24,6 +24,10 @@ body {
     font-family: 'Exo', sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    background-color: lightgray;
+}
+header, main {
+    background-color: whitesmoke;
 }
 
 .carousel-inner video {
