@@ -48,3 +48,20 @@ header, main {
 .link:hover, .link-two:hover {
     color: #c500cc;
 }
+
+/* Spinner de Carga*/
+.backcover {
+    height: 100vw;
+}
+.spinner {
+    z-index: 1031;
+    position: fixed;
+    top: 30%;
+    left: 45%;
+}
+
+.spinner > .spinner-border {
+    border-width: 1em;
+    width: 5em;
+    height: 5em;
+}

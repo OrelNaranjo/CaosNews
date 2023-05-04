@@ -1,4 +1,4 @@
-/* ********* Obtener fecha actual ********* */
+/* ********* Función fecha actual ********* */
 function getFecha(){
   const Month = [
     "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
@@ -12,6 +12,13 @@ function getFecha(){
   document.getElementById("current_date").innerHTML = Day[date.getDay()] + " " + date.getDate() + " de " + Month[date.getMonth()] + " de " + date.getFullYear();
 }
 
+/* ********* JQuery Personalizado ********* */
+$(document).ready(function () {
+
+  //Desvanecer Spinner de Carga
+  $(".backcover").fadeOut(1000);
+
+});
 
 /* VALIDACIONES MUAJAJJA */
 function validarFormulario() {
