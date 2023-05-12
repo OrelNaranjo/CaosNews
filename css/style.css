@@ -24,10 +24,44 @@ body {
     font-family: 'Exo', sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    background-color: lightgray;
+}
+header, main {
+    background-color: whitesmoke;
 }
 
 .carousel-inner video {
     width: 100%;
     max-height: 400px;
     object-fit: fill;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+.link-two {
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+.link:hover, .link-two:hover {
+    color: #c500cc;
+}
+
+/* Spinner de Carga*/
+.backcover {
+    height: 100vw;
+}
+.spinner {
+    z-index: 1031;
+    position: fixed;
+    top: 30%;
+    left: 45%;
+}
+
+.spinner > .spinner-border {
+    border-width: 1em;
+    width: 5em;
+    height: 5em;
 }
