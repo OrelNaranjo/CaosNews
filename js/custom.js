@@ -1,15 +1,29 @@
-/* ********* Función fecha actual ********* */
-function getFecha(){
-  const Month = [
-    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
-    "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
-  ];
-  const Day = [
-    "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado",
-  ];
-  const date = new Date();
+/* ********* Función fecha actual y reloj ********* */
+function showDateTime() {
+  // Obtener el elemento de HTML para mostrar la fecha y el reloj
+  var clockElement = document.getElementById("current_date");
 
-  document.getElementById("current_date").innerHTML = Day[date.getDay()] + " " + date.getDate() + " de " + Month[date.getMonth()] + " de " + date.getFullYear();
+  // Obtener la fecha actual
+  var fecha = new Date();
+
+  // Crear variables
+  var opcionesFecha = { day: "numeric", month: "long", year: "numeric" };
+  var opcionesHora = { hour: "numeric", minute: "numeric", second: "numeric" };
+
+  // Obtener la fecha para Chile
+  var dia = fecha.toLocaleDateString("es-CL", opcionesFecha);
+
+  // Obtener la hora actual
+  var hora = fecha.toLocaleTimeString("es-CL", opcionesHora);
+
+  // Combinar la fecha y el reloj en variable
+  var fechaCompleta = dia + " " + hora;
+
+  // Mostrar la fecha y el reloj combinados en el elemento HTML
+  clockElement.textContent = fechaCompleta;
+
+  // Actualizar cada segundo
+  setInterval(showDateTime, 1000);
 }
 
 /* ********* JQuery Personalizado ********* */
