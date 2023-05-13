@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ========== Favicon ========== -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
+  <!-- ========== CSS Bootstrap ========== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- ========== CSS Personalizado ========== -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Caos News - La voz de todos</title>
+</head>
+
+<body onload="showDateTime()">
+  <!-- ========== Spinner de Carga ========== -->
+  <div class="backcover bg-black bg-gradient">
+    <div class="spinner text-center">
+      <h1 class="text-light">Cargando...</h1>
+      <div class="spinner-border text-warning" role="status"></div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- ========== Encabezado ========== -->
+    <header>
+      <div class="row mx-0 py-1 bg-dark">
+        <div class="col"></div>
+        <div class="col-auto text-end">
+          <div class="text-end">
+            <p class="text-light" id="current_date"></p>
+          </div>
+        </div>
+        <div class="col-auto text-end">
+          <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#login">Inicio de sesión</a>
+        </div>
+        <!-- ========== Ventana modal de inicio de sesión ========== -->
+        <div class="modal fade" id="login" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+          aria-labelledby="loginLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header pb-0 pt-3">
+                <h5>Iniciar Sesión</h5>
+                <button type="button" class="btn-close mb-1" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="px-4">
+                  <form method="post">
+                    <div class="row py-1">
+                      <label for="email" class="ps-0">Correo Electrónico:</label>
+                    </div>
+                    <div class="row">
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="row py-1">
+                      <label for="password" class="ps-0">Contraseña:</label>
+                    </div>
+                    <div class="row">
+                      <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="row w-50">
+                      <input type="submit" class="btn btn-primary ms-auto mt-2" value="Iniciar Sesión">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="row text-end">
+                  <h6>No te acuerdas de tu contraseña?</h6>
+                  <a href="#" class="link-two">Restablecer Contraseña</a>
+                </div>
+                <div class="row text-end">
+                  <h6>No tienes una cuenta?</h6>
+                  <a href="#" class="link-two">Registrarse</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row p-md-4">
+        <!-- ========== Logotipo ========== -->
+        <div class="col">
+          <div class="container-fluid">
+            <a href="index.html">
+              <img src="images/logotipo.webp" class="img-fluid w-50" alt="Caos News">
+            </a>
+          </div>
+        </div>
+        <!-- ========== Buscador ========== -->
+        <div class="col-4">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar aqui..." aria-label="Search">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+      <!-- ========== Barra de navegación ========== -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ACTUALIDAD</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SOCIEDAD</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">POLITICA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ENTRETENIMIENTO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ECONOMIA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">DEPORTES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MUNDO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- ========== Carrusel de imagenes ========== -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video class="img-fluid w-100" autoplay loop muted>
+              <source src="components/noticias-banner.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid w-100" autoplay loop muted>
+              <source src="components/noticias-vivo-banner.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+    <!-- ========== Cuerpo ========== -->
+    <main class="p-4 px-5">
+      <div class="row">
+        <div class="col">
+          <h2>Anuncios</h2>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="components/advertisements/04686974de8a84079774a784ce3a837bec753705_27876_14_300X560.jpeg" class="card-img-top" alt="Loto">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="components/advertisements/2d104f3f5b4c100862abee994b5b812911189325_27528_300x560-20230504172852585.jpeg" class="card-img-top" alt="Camara Chilena de la Construcción">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="components/advertisements/c99fbfe35bdd7ec6d118ad6e03e6a1aca7199cbb_27925_300x560-eeee-20230512175109551.jpeg" class="card-img-top" alt="Edición Especial">
+          </div>
+        </div>
+      </div>
+      <div class="row pt-4">
+        <div class="col-12">
+          <div class="card h-100">
+            <img src="components/advertisements/d488fff1d6c4a0a58d5a4b0097ddc36a.gif" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ========== Pie de página ========== -->
+    <div class="container bg-dark text-light">
+      <footer class="p-3">
+        <div class="row">
+          <div class="col-6 col-md-2">
+            <ul class="nav flex-column">
+              <li class="nav-item pb-2"><a href="acercade.html" class="nav-link p-0 text-muted">Acerca de Nosotros</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Actualidad</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Sociedad</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Politica</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Entretenimiento</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2">
+            <ul class="nav flex-column">
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Economia</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Deportes</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Mundo</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Nacional</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Cultura</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2">
+            <ul class="nav flex-column">
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Arte</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Vida</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Cine</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Tecnología</a></li>
+              <li class="nav-item pb-2"><a href="#" class="nav-link p-0 text-muted">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1">
+            <form>
+              <h5>Suscríbete al boletín informativo</h5>
+              <p>Recibe un resumen mensual de nuestras noticias más destacadas.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <form action="">
+                  <label for="newsletter1" class="visually-hidden">Correo Electrónico</label>
+                  <input id="newsletter1" type="email" class="form-control" placeholder="Correo electrónico" required>
+                  <button class="btn btn-primary" type="submit">Suscríbete</button>
+                </form>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between border-top py-3">
+          <p>©2023 Caos News, Todos los derechos reservados.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><i class="fa-brands fa-instagram"></i></li>
+            <li class="ms-3"><i class="fa-brands fa-facebook"></i></li>
+            <li class="ms-3"><i class="fa-brands fa-twitter"></i></li>
+            <li class="ms-3"><i class="fa-brands fa-twitch"></i></li>
+          </ul>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-center pt-3 border-top">
+          <p>Sitio Web creado por Tech&Fun.</p>
+        </div>
+      </footer>
+    </div>
+    <!-- ========== Libreria JS Bootstrap ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <!-- ========== Libreria JS jQuery ========== -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- ========== Libreria FontAwesome ========== -->
+    <script src="https://kit.fontawesome.com/3e01804e3f.js" crossorigin="anonymous"></script>
+    <!-- ========== Libreria JS Personalizada ========== -->
+    <script src="js/custom.js"></script>
+  </div>
+</body>
+
+</html>
