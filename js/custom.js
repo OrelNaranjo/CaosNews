@@ -42,14 +42,18 @@ $(document).ready(function () {
     var correo = $('#correo').val().trim();
     var telefono = $('#telefono').val().trim();
     var mensaje = $('#mensaje').val().trim();
+    var nomvalid;
 
     // Validar nombre
     if (nombre === '') {
       $('#nombre').addClass('is-invalid');
+      nomvalid = false;
     } else if (!/^[a-zA-Z]+$/.test(nombre)) {
       $('#nombre').addClass('is-invalid');
+      nomvalid = false;
     } else {
       $('#nombre').removeClass('is-invalid');
+      nomvalid = true;
     }
 
     // Validar correo electrónico
@@ -76,7 +80,7 @@ $(document).ready(function () {
     }
 
     // Si todos los campos son válidos, se puede enviar el formulario
-    if (nombre !== '' && correoPattern.test(correo) && telefonoPattern.test(telefono) && mensaje !== '') {
+    if (nomvalid === true  && correoPattern.test(correo) && telefonoPattern.test(telefono) && mensaje !== '') {
       // Carga la ventana modal
       $('#success-modal').modal('show');
     }
