@@ -46,6 +46,8 @@ $(document).ready(function () {
     // Validar nombre
     if (nombre === '') {
       $('#nombre').addClass('is-invalid');
+    } else if (!/^[a-zA-Z]+$/.test(nombre)) {
+      $('#nombre').addClass('is-invalid');
     } else {
       $('#nombre').removeClass('is-invalid');
     }

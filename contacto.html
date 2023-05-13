@@ -138,67 +138,65 @@
           </div>
         </div>
       </nav>
-      <!-- ========== Carrusel de imagenes ========== -->
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <video class="img-fluid w-100" autoplay loop muted>
-              <source src="components/noticias-banner.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="carousel-item">
-            <video class="img-fluid w-100" autoplay loop muted>
-              <source src="components/noticias-vivo-banner.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+
     </header>
     <!-- ========== Cuerpo ========== -->
     <main class="p-4 px-5">
       <div class="row">
         <div class="col">
-          <h2>Anuncios</h2>
+          <h2>Contacto</h2>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="row">
         <div class="col">
-          <div class="card h-100">
-            <img src="components/advertisements/04686974de8a84079774a784ce3a837bec753705_27876_14_300X560.jpeg" class="card-img-top" alt="Loto">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="components/advertisements/2d104f3f5b4c100862abee994b5b812911189325_27528_300x560-20230504172852585.jpeg" class="card-img-top" alt="Camara Chilena de la Construcción">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="components/advertisements/c99fbfe35bdd7ec6d118ad6e03e6a1aca7199cbb_27925_300x560-eeee-20230512175109551.jpeg" class="card-img-top" alt="Edición Especial">
-          </div>
-        </div>
-      </div>
-      <div class="row pt-4">
-        <div class="col-12">
-          <div class="card h-100">
-            <img src="components/advertisements/d488fff1d6c4a0a58d5a4b0097ddc36a.gif" class="card-img-top" alt="...">
-          </div>
+          <form id="contact-form">
+
+            <!-- Ventana emergente -->
+            <div id="success-modal" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">¡Formulario enviado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Gracias por enviar el formulario. Nos pondremos en contacto contigo pronto.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario Contacto -->
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+              <div class="invalid-feedback">
+                Por favor, ingrese su nombre.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico">
+              <div class="invalid-feedback">
+                Por favor, ingrese un correo electrónico válido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Número de teléfono</label>
+              <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono">
+              <div class="invalid-feedback">
+                Por favor, ingrese un número de teléfono válido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="5" placeholder="Ingrese su mensaje"></textarea>
+              <div class="invalid-feedback">
+                Por favor, ingrese un mensaje.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
         </div>
       </div>
     </main>
