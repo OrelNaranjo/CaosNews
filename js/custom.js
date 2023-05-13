@@ -30,7 +30,7 @@ function showDateTime() {
 $(document).ready(function () {
 
   //Desvanecer Spinner de Carga
-  $(".backcover").fadeOut(1000);
+  $(".backcover").fadeOut(500);
 
   //Validaciones Formulario Contacto
 
